@@ -13,13 +13,15 @@ namespace EthUoft.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.Data = APIcaller.All();
+
+            //or you can use APIcaller.Specific(name_of_currency);
+            //for a specific currency
             return View();
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
             return View();
         }
 

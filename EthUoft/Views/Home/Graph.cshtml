@@ -5,38 +5,6 @@
 
 <h2>Graph</h2>
 
-<table style="width:100%">
-    <tr>
-        <th>rank</th>
-        <th>name</th>
-        <th>symbol</th>
-        <th>price_usd</th>
-        <th>price_btc</th>
-        <th>percent_change_1h</th>
-        <th>percent_change_24h</th>
-        <th>percent_change_7d</th>
-        <th>last_updated</th>
-    </tr>
-    @foreach (var item in ViewBag.Data)
-    {
-        
-        <tr>
-            <td>@item.rank</td>
-            <td>@item.name</td>
-            <td>@item.symbol</td>
-            <td>@item.price_usd</td>
-            <td>@item.price_btc</td>
-            <td>@item.percent_change_1h</td>
-            <td>@item.percent_change_24h</td>
-            <td>@item.percent_change_7d</td>
-            <td>@item.last_updated</td>
-        </tr>
-
-        
-
-    }
-</table>
-
 <canvas id="myChart"></canvas>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script>
@@ -60,5 +28,37 @@
         options: {}
     });
 </script>
+
+<table style="width:100%">
+    <tr>
+        <th>rank</th>
+        <th>name</th>
+        <th>symbol</th>
+        <th>price_usd</th>
+        <th>price_btc</th>
+        <th>percent_change_1h</th>
+        <th>percent_change_24h</th>
+        <th>percent_change_7d</th>
+        <th>last_updated</th>
+    </tr>
+    @foreach (var item in ViewBag.Data)
+    {
+
+        <tr>
+            <td>@item.rank</td>
+            <td>@item.name</td>
+            <td>@item.symbol</td>
+            <td>@item.price_usd</td>
+            <td>@item.price_btc</td>
+            <td>@item.percent_change_1h</td>
+            <td>@item.percent_change_24h</td>
+            <td>@item.percent_change_7d</td>
+            <td>@item.last_updated</td>
+        </tr>
+
+
+
+    }
+</table>
 
 
