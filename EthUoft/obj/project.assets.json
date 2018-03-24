@@ -13132,11 +13132,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\romir\\Documents\\Visual Studio 2017\\Projects\\EthUoft\\EthUoft\\EthUoft.csproj",
+      "projectUniqueName": "C:\\Users\\romir\\Documents\\Visual Studio 2017\\Projects\\EthUoft\\git_repo_eth\\VolatilityCoin\\EthUoft\\EthUoft.csproj",
       "projectName": "EthUoft",
-      "projectPath": "C:\\Users\\romir\\Documents\\Visual Studio 2017\\Projects\\EthUoft\\EthUoft\\EthUoft.csproj",
+      "projectPath": "C:\\Users\\romir\\Documents\\Visual Studio 2017\\Projects\\EthUoft\\git_repo_eth\\VolatilityCoin\\EthUoft\\EthUoft.csproj",
       "packagesPath": "C:\\Users\\romir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\romir\\Documents\\Visual Studio 2017\\Projects\\EthUoft\\EthUoft\\obj\\",
+      "outputPath": "C:\\Users\\romir\\Documents\\Visual Studio 2017\\Projects\\EthUoft\\git_repo_eth\\VolatilityCoin\\EthUoft\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
