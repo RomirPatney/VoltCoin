@@ -13122,7 +13122,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\romir\\.nuget\\packages\\": {},
+    "C:\\Users\\Claudio\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
@@ -13132,18 +13132,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\romir\\Documents\\Visual Studio 2017\\Projects\\EthUoft\\git_repo_eth\\VolatilityCoin\\EthUoft\\EthUoft.csproj",
+      "projectUniqueName": "C:\\Users\\Claudio\\Projects\\VolatilityCoin\\EthUoft\\EthUoft.csproj",
       "projectName": "EthUoft",
-      "projectPath": "C:\\Users\\romir\\Documents\\Visual Studio 2017\\Projects\\EthUoft\\git_repo_eth\\VolatilityCoin\\EthUoft\\EthUoft.csproj",
-      "packagesPath": "C:\\Users\\romir\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\romir\\Documents\\Visual Studio 2017\\Projects\\EthUoft\\git_repo_eth\\VolatilityCoin\\EthUoft\\obj\\",
+      "projectPath": "C:\\Users\\Claudio\\Projects\\VolatilityCoin\\EthUoft\\EthUoft.csproj",
+      "packagesPath": "C:\\Users\\Claudio\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Claudio\\Projects\\VolatilityCoin\\EthUoft\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\romir\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Claudio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],

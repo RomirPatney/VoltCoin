@@ -20,3 +20,14 @@ C:\Users\romir\Documents\Visual Studio 2017\Projects\EthUoft\git_repo_eth\Volati
 C:\Users\romir\Documents\Visual Studio 2017\Projects\EthUoft\git_repo_eth\VolatilityCoin\EthUoft\obj\Debug\netcoreapp2.0\EthUoft.AssemblyInfo.cs
 C:\Users\romir\Documents\Visual Studio 2017\Projects\EthUoft\git_repo_eth\VolatilityCoin\EthUoft\obj\Debug\netcoreapp2.0\EthUoft.dll
 C:\Users\romir\Documents\Visual Studio 2017\Projects\EthUoft\git_repo_eth\VolatilityCoin\EthUoft\obj\Debug\netcoreapp2.0\EthUoft.pdb
+C:\Users\Claudio\Projects\VolatilityCoin\EthUoft\bin\Debug\netcoreapp2.0\EthUoft.deps.json
+C:\Users\Claudio\Projects\VolatilityCoin\EthUoft\bin\Debug\netcoreapp2.0\EthUoft.runtimeconfig.json
+C:\Users\Claudio\Projects\VolatilityCoin\EthUoft\bin\Debug\netcoreapp2.0\EthUoft.runtimeconfig.dev.json
+C:\Users\Claudio\Projects\VolatilityCoin\EthUoft\bin\Debug\netcoreapp2.0\EthUoft.dll
+C:\Users\Claudio\Projects\VolatilityCoin\EthUoft\bin\Debug\netcoreapp2.0\EthUoft.pdb
+C:\Users\Claudio\Projects\VolatilityCoin\EthUoft\obj\Debug\netcoreapp2.0\EthUoft.csprojResolveAssemblyReference.cache
+C:\Users\Claudio\Projects\VolatilityCoin\EthUoft\obj\Debug\netcoreapp2.0\EthUoft.csproj.CoreCompileInputs.cache
+C:\Users\Claudio\Projects\VolatilityCoin\EthUoft\obj\Debug\netcoreapp2.0\EthUoft.AssemblyInfoInputs.cache
+C:\Users\Claudio\Projects\VolatilityCoin\EthUoft\obj\Debug\netcoreapp2.0\EthUoft.AssemblyInfo.cs
+C:\Users\Claudio\Projects\VolatilityCoin\EthUoft\obj\Debug\netcoreapp2.0\EthUoft.dll
+C:\Users\Claudio\Projects\VolatilityCoin\EthUoft\obj\Debug\netcoreapp2.0\EthUoft.pdb
