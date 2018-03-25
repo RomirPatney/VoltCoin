@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Data.SqlClient;
+using System.Collections;
 
 namespace EthUoft.Infrastucture
 {
     public class APIcaller
     {
-
+        private static string strCon = "Server=tcp:ethuoft.database.windows.net,1433;Initial Catalog=EthUoft;Persist Security Info=False;User ID=database_admin;Password=Cleaner123@@;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
         private static readonly HttpClient client = new HttpClient();
         private static string allCurrencies;
         private static string specificCurrency;
@@ -65,6 +67,73 @@ namespace EthUoft.Infrastucture
             var jToken = JToken.Parse(call);
             var users = jToken.ToObject<List<Currency>>();
             return users;
+        }
+
+        public static ArrayList GetTimeStamps()
+        {
+            ArrayList Timestamp = new ArrayList();
+            String sql = "SELECT [Timestamp] FROM [dbo].[graphmaker]";
+            SqlConnection conn = new SqlConnection(strCon);
+            SqlCommand comm = new SqlCommand(sql, conn);
+            conn.Open();
+            SqlDataReader nwReader = comm.ExecuteReader();
+            while (nwReader.Read())
+            {
+                Timestamp.Add((string)nwReader["Timestamp"] + " hrs");
+                //Timestamp = "\""+(string)nwReader["Timestamp"] + "hrs\" ,";
+                
+            }
+            nwReader.Close();
+            conn.Close();
+            return Timestamp;
+        }
+
+        public static string GetValues()
+        {
+            string Value = "";
+            String sql = "SELECT [Value] FROM [dbo].[graphmaker]";
+            SqlConnection conn = new SqlConnection(strCon);
+            SqlCommand comm = new SqlCommand(sql, conn);
+            conn.Open();
+            SqlDataReader nwReader = comm.ExecuteReader();
+            while (nwReader.Read())
+            {
+                Value += ((Convert.ToDouble((string)nwReader["Value"])) * 100 + 100).ToString() + ",";
+            }
+            nwReader.Close();
+            conn.Close();
+            return Value;
+        }
+
+        public static bool InsertValueEveryHour()
+        {
+            var date = DateTime.Now;
+            using (SqlConnection connection =new SqlConnection(strCon))
+            {
+                Currency eth = new Currency();
+                foreach (var temp in Specific("Ethereum"))
+                {
+                    eth = temp;
+                    break;
+                }
+                
+                string queryString = "IF NOT EXISTS (SELECT Timestamp FROM [dbo].[graphmaker] WHERE Timestamp = '" + date.Hour + "') BEGIN"+
+                    " INSERT INTO [dbo].[graphmaker] (Timestamp, Value) VALUES('" + date.Hour+"', '"+ eth.percent_change_1h + "'); END ELSE BEGIN "+
+                    "UPDATE [dbo].[graphmaker] SET Value = '"+ eth.percent_change_1h + "' WHERE Timestamp = '" +date.Hour +"' END";
+                SqlCommand command = new SqlCommand(queryString, connection);
+
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+
+            }
         }
         
 

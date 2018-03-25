@@ -3,27 +3,34 @@
 }
 <br />
 <canvas id="myChart"></canvas>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var chart = new Chart(ctx, {
         // The type of chart we want to create
         type: 'line',
-
-        // The data for our dataset
         data: {
-            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            labels: [@foreach (string temp in ViewBag.Timestamps)
+            {
+              @: "@(temp)" ,
+
+            }
+
+            ],
             datasets: [{
-                label: "My First dataset",
+                label: "Volt coin fluctuation",
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [0, 10, 5, 2, 20, 30, 45],
+                data: [@ViewBag.Values],
             }]
         },
 
         // Configuration options go here
         options: {}
     });
+
+    
 </script>
 
 <table style="width:100%">

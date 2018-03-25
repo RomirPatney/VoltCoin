@@ -11,12 +11,18 @@ namespace EthUoft.Controllers
 {
     public class HomeController : Controller
     {
+        private bool skipper;
         public IActionResult Index()
         {
+            if(skipper == false)
+            {
+                StartInsertion();
+            }
+            
+            skipper = true;
+            ViewBag.Values = APIcaller.GetValues();
+            ViewBag.Timestamps = APIcaller.GetTimeStamps();
             ViewBag.Data = APIcaller.All();
-
-            //or you can use APIcaller.Specific(name_of_currency);
-            //for a specific currency
             return View();
         }
 
@@ -44,6 +50,17 @@ namespace EthUoft.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public void StartInsertion()
+        {
+            var startTimeSpan = TimeSpan.Zero;
+            var periodTimeSpan = TimeSpan.FromMinutes(60);
+
+            var timer = new System.Threading.Timer((e) =>
+            {
+                APIcaller.InsertValueEveryHour();
+            }, null, startTimeSpan, periodTimeSpan);
         }
     }
 }
